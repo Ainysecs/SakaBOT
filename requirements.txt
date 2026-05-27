@@ -1,4 +1,8 @@
 discord.py
 python-dotenv
-flask
+pyyaml
+pynacl
+davey
 google-genai
+gspread
+oauth2client

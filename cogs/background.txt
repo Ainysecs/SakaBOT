@@ -1,0 +1,33 @@
+#anotações dos testes. se não houver observações sobre um módulo específico, considere-o pronto.
+--------
+
+v2.0
+
+# /gcmd falta paginar os comandos do servidor
+# atualize as tabelas de comandos
+
+--------
+
+obs. (melhorias):
+
+--------
+<<<<<<<<<<<MEMBERS.py>>>>>>>>>>>
+🛠️ Melhorias de Interface (UX)
+Autocomplete no /member edit e remove: O bot sugere os nomes dos membros da planilha enquanto você digita. Isso evita erros de grafia e o erro "Nerd não encontrado".
+
+🥺 Modals para /member add: Em vez de preencher argumentos na barra do Discord, abre-se uma janela (pop-up) com campos de texto. Fica muito mais limpo.
+Botão de "Atualizar" no Mural: Adicionar um botão 
+
+🔄 na PaginatorView para forçar o bot a ler a planilha novamente sem precisar usar o comando /member list de novo.
+
+⚙️ Robustez do Sistema
+Tratamento de Erros por Célula: Se alguém apagar manualmente uma linha no meio da planilha e deixar um buraco, o bot deve ignorar linhas vazias no list (filtro de cache).
+Log de Alterações: Criar um canal de log privado onde o bot avisa: "O administrador [Nome] editou o membro [Rodrigo]". Ajuda na segurança do servidor.
+Validação de Caracteres: Impedir que alguém coloque emojis gigantes ou textos que quebrem o limite de 1024 caracteres do Embed do Discord.
+
+📊 Organização da Planilha
+Formatação Condicional: Deixar a planilha colorida automaticamente (ex: se a coluna C estiver vazia, a célula fica vermelha) para você bater o olho e ver o que falta preencher.
+Proteção de Intervalo: Bloquear a edição manual da primeira linha (cabeçalhos) para evitar que você apague o "MEMBRO / FUNCAO / DESCRICAO" sem querer pelo celular.
+
+🚀 Performance
+Cache Inteligente: Em vez de baixar a planilha toda vez que alguém der /list, o bot só baixa se houver uma alteração feita pelos comandos add/edit/remove. (Economiza a cota da API do Google).

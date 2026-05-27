@@ -1,0 +1,73 @@
+# ==============================================================================
+# 1. PYTHON (Caches, Compilados e Ambientes Virtuais)
+# ==============================================================================
+# Caches e compilados
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes Virtuais modernos
+.venv/
+venv/
+env/
+
+# Ferramentas de empacotamento e testes
+.pytest_cache/
+.pypoetry/
+.pipenv/
+.build/
+dist/
+eggs/
+*.egg-info/
+
+# ==============================================================================
+# 2. CONFIGURAÇÕES, CREDENCIAIS, BANCOS E LOGS
+# ==============================================================================
+# Arquivos de ambiente locais (Chaves e Tokens)
+.env
+.env.*
+!.env.example
+
+# Configurações locais com credenciais
+*.local.json
+*.local.yaml
+*.local.yml
+*.local.ini
+*.local.toml
+
+# Bancos de dados locais e logs
+*.db
+*.sqlite
+*.sqlite3
+*-journal
+*.log
+logs/
+
+# ==============================================================================
+# 3. IDES, EDITORES E SISTEMA OPERACIONAL
+# ==============================================================================
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# JetBrains (PyCharm) e editores de terminal (Vim/Nano)
+.idea/
+*.swp
+*.swo
+*~
+
+# Lixo de SO (Mac/Windows)
+.DS_Store
+._*
+Thumbs.db
+
+# ==============================================================================
+# 4. QUALIDADE DE CÓDIGO E TESTES
+# ==============================================================================
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+**/teste.*

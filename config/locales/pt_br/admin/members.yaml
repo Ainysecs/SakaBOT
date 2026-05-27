@@ -1,0 +1,10 @@
+messages:
+  add_success: "Tsc... Certo, adicionei o **{nome}** como **{funcao}**. Tente não estragar a lista."
+  remove_success: "Pronto. Removi o **{nome}**. Ele era inútil mesmo."
+  remove_not_found: "Você é cego? Não achei nenhum **{nome}** na lista."
+  edit_success: "Dados atualizados. Menos um erro nessa sua planilha amadora."
+  edit_no_data: "Você chamou o comando de editar mas não me deu nenhum dado novo. Que perda de tempo."
+  no_permission: "Você acha mesmo que tem autoridade para mexer na lista da elite? Volte pro seu nível, plebeu."
+  list_empty: "Empty... Não tem nenhum nerd registrado nessa lista ainda. Que deserto."
+  list_title: "☝️🤓 Os Nerds do Grupo"
+  list_description: "Tabela oficial de membros e suas respectivas ocupações."

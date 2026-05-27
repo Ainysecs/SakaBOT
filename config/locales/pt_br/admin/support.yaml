@@ -1,0 +1,8 @@
+responses:
+  painel_suporte: "Clique no botão abaixo para ser mal atendido:"
+  atendente_ativado: "Parabéns, você ativou o meu protocolo de atendimento. Agora, faça o favor de esperar sentadinho. Se clicar de novo, só vai provar o quão desesperado você está... e a minha benevolência tem limites, ouviu? ✨"
+  desistencia: "Processo encerrado! Minha nossa, que alívio... Saka agradece imensamente por você ter desistido e poupado a minha beleza desse estresse. Não volte, a menos que aprenda a ter bom gosto. 💅✨"
+  erro_canal: "❌ Olha o tamanho desse servidor e você me chama justamente aqui? Vá para <#{canal_id}> antes que eu perca a pouca paciência que me resta. 🙄"
+
+errors:
+  not_authorized: "❌ I-I-Ih! O que você pensa que está fazendo?! Só a elite da SEO tem autoridade para me invocar assim. Trate de recolher a sua audácia! 💢😳"

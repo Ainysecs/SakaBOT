@@ -1,0 +1,46 @@
+{
+  "messages": {
+    "main_title": "Central de Ajuda da Saka",
+    "main_description": "Hmph... Não sei por que você precisa de um manual para coisas tão óbvias, mas aqui está. Selecione uma categoria no menu abaixo para ver o que eu posso fazer.",
+    "hybrid_note": "⚡ **Dica:** Alguns comandos são **Híbridos**. Isso significa que eles funcionam tanto pelo menu novo (`/`) quanto pelo meu prefixo clássico (`!`).",
+    "footer": "Saka OS - Sistema de Ajuda",
+    "invalid_category": "❌ B-Baka! A categoria '{cat}' não existe. Aprenda a digitar direito!"
+  },
+  "categorias": {
+    "admin": {
+      "nome": "⚙️ Administração",
+      "descricao": "Painel de controle técnico para gerir meu núcleo perfeito. Só o meu criador tem permissão para mexer aqui!",
+      "comandos": [
+        { "cmd": "/sync", "desc": "⚡ [Híbrido] Sincroniza ou limpa a árvore de comandos na API do Discord." },
+        { "cmd": "/reload", "desc": "⚡ [Híbrido] Recarrega meus módulos (Cogs) instantaneamente." },
+        { "cmd": "/cogs", "desc": "⚡ [Híbrido] Painel de monitoramento e gestão dos módulos ativos." },
+        { "cmd": "/stats", "desc": "⚡ [Híbrido] Verifica meus sinais vitais, ping e status das APIs." }
+      ]
+    },
+    "moderação": {
+      "nome": "🛡️ Moderação",
+      "descricao": "Ferramentas essenciais para a staff manter a comunidade limpa, organizada e segura.",
+      "comandos": [
+        { "cmd": "/clear", "desc": "🗑️ [Slash] Faz a limpeza de histórico no chat atual." },
+        { "cmd": "/member", "desc": "👥 [Slash] Gestão na planilha. Subcomandos: `list`, `add`, `remove`, `edit`." }
+      ]
+    },
+    "utilidades": {
+      "nome": "🧩 Extras & Utilidades",
+      "descricao": "Sistemas auxiliares, murais persistentes e painéis interativos de suporte.",
+      "comandos": [
+        { "cmd": "/help", "desc": "⚡ [Híbrido] Abre este lindo painel interativo de ajuda." },
+        { "cmd": "/support", "desc": "🎫 [Slash] Inicia o painel do canal de atendimento (SAC)." },
+        { "cmd": "/gcmd", "desc": "📌 [Slash] Gera o mural persistente de comandos gerais." },
+        { "cmd": "/rmural", "desc": "🧹 [Slash] Remove e gerencia os murais fixados no servidor." }
+      ]
+    },
+    "publico": {
+      "nome": "🌐 Área Pública",
+      "descricao": "Recursos interativos e o meu cérebro brilhante à disposição de vocês.",
+      "comandos": [
+        { "cmd": "/ai", "desc": "⚡ [Híbrido] Bate-papo inteligente.\n**Atenção:** Use a versão de barra (`/ai`) para **tarefas individuais rápidas**. Se precisar enviar textos longos com **imagens** em anexo, use a versão antiga por prefixo (`!ai`)!" }
+      ]
+    }
+  }
+}

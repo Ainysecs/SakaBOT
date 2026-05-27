@@ -1,0 +1,83 @@
+{
+  "messages": {
+    "no_permission": "❌ **ERRO:** Você não possui o Cargo de Elite configurado para usar este utilitário! Suma daqui, plebeu! 💢"
+  },
+  "brawl_tools": {
+    "embed_base": {
+      "title": "Comandos do Brawl Tools",
+      "url": "https://docs.brawltools.net/books/commands",
+      "description": "Lista oficial de comandos para consulta. Utilize os comandos abaixo diretamente nos canais #arquivo-starr e #buscar-times.",
+      "color": "0xFFCC00",
+      "footer": "Brawl Tools • Sistema de Consulta",
+      "thumbnail": "https://brawltools.net/img/brand/bt_logo4.webp"
+    },
+    "pages": [
+      {
+        "title": "📋 Estatísticas de Jogadores",
+        "commands": ["/me", "/me-battles", "/me-winrates", "/image-me", "/image-chart", "/player-rating"]
+      },
+      {
+        "title": "⚙️ Verificação",
+        "commands": ["/verify-global", "/update", "/accounts", "/delete-me", "/find", "/watchlist"]
+      },
+      {
+        "title": "💤 Outros",
+        "commands": ["/vote", "/vote-reminder", "/command stats", "/embed-help", "/random-brawler"]
+      },
+      {
+        "title": "☝️🤓 Utilidades",
+        "commands": ["/map", "/news", "/me", "/me-live", "/me-live-stop"]
+      },
+      {
+        "title": "📊 Estatísticas de Clubes",
+        "commands": ["/club", "/image-club"]
+      },
+      {
+        "title": "🔍 Times",
+        "commands": ["/ts post"]
+      }
+    ]
+  },
+  "gerais": {
+    "embed_base": {
+      "title": "Comandos do Servidor",
+      "description": "Central de utilitários e ferramentas ativas no servidor.",
+      "color": "0x3498DB",
+      "thumbnail": "https://images.emojiterra.com/google/android-nougat/512px/2699.png",
+      "footer": "SAKAnagem Enterprise • 2026"
+    },
+    "pages": [
+      {
+        "title": "📅 Página 1 - Eventos e Enquetes (Sesh & Simple Poll)",
+        "commands": [
+          "**🤖 Sesh (Agendamentos):**",
+          "• `/create` - Cria novos eventos e calendários.",
+          "• `/poll` - Cria enquetes avançadas de presença.",
+          "• `/list` - Lista todos os eventos ativos no servidor.",
+          "• `/remind` - Configura lembretes automáticos.",
+          "• `/delete` - Cancela ou remove um evento agendado.",
+          "• `/link` - Vincula calendários externos.",
+          "• `/ai` - Configurações auxiliares de inteligência.",
+          "",
+          "**📊 Simple Poll:**",
+          "• `/poll` - Cria enquetes rápidas de escolha simples."
+        ]
+      },
+      {
+        "title": "🎙️ Página 2 - Multimídia e IA (Craig & SakaIA)",
+        "commands": [
+          "**🎤 Craig (Gravação de Áudio):**",
+          "• `/join` - Traz o bot para o seu canal de voz atual para iniciar a gravação.",
+          "• `/stop` - Finaliza a gravação atual e gera os links para download.",
+          "• `/note` - Adiciona uma nota com marcação de tempo na timeline.",
+          "• `/recordings` - Exibe e gerencia o histórico de gravações.",
+          "• `/info` - Exibe os status técnicos e latência do Craig.",
+          "• `/webapp` - Fornece o link para a interface web de controle.",
+          "",
+          "**🧠 SakaIA (Nosso Módulo Local):**",
+          "• `!ia [pergunta]` - Respostas inteligentes diretamente pelo chat."
+        ]
+      }
+    ]
+  }
+}

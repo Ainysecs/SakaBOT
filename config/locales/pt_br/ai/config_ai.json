@@ -1,0 +1,15 @@
+{
+  "messages": {
+    "wrong_channel": "🤖 B-Baka! Use o canal <#{channel_id}> para falar comigo!",
+    "empty_prompt": "🤖 Você precisa mandar alguma pergunta ou enviar uma imagem no comando, seu plebeu!",
+    "invalid_image": "🙄 Eu só analiso **imagens** de até 8MB, tá? Não me mande lixo digital.",
+    "internal_error": "❌ Ocorreu um erro interno na Saka: `{error}`",
+    "ignored": "🙄 ... (Saka te ignorou completamente)",
+    "cut_suffix": " 💢 (Cansei de falar...)",
+    "cooldown": "⏳ B-Baka! Eu não sou uma máquina de respostas infinitas! Espere {retry_after} segundos para falar comigo de novo!"
+  },
+  "limits": {
+    "max_image_size_bytes": 8388608, 
+    "cooldown_seconds": 30 
+  }
+}

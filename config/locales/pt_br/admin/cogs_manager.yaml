@@ -1,0 +1,18 @@
+responses:
+  relatorio_sucesso: "Aqui está o mapa completo das minhas engrenagens. Vê se não quebra nada! 🙄"
+
+embeds:
+  title: "⚙️ Painel de Módulos (Cogs)"
+  folder: "📁 {pasta}"
+  footer: "Status: {online}/{total} operantes. Satisfeito?"
+
+status:
+  online: "🟢 `{modulo}`"
+  offline: "🔴 `{modulo}`"
+
+errors:
+  dir_not_found: "❌ O diretório 'cogs' sumiu! O que você fez com a minha estrutura?!"
+  no_categories: "⚠️ Vazio... não encontrei nenhuma categoria ou módulo. Você deletou tudo?!"
+  corte_lista: "\n...[Lista muito longa, cortei por segurança]..."
+  not_owner: "I-I-Ih! O que você está pensando?! Isso é estritamente confidencial, você não é a liderança da SEO!! 💢😳"
+  generic_error: "❌ Ocorreu um erro interno horrível ao processar o comando. Olha o console."

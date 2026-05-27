@@ -1,0 +1,13 @@
+responses:
+  sem_chaves: "⚪ Esqueci de configurar as chaves... ou você esqueceu de me dar? 💢"
+  render_suspenso: "🔴 Suspenso"
+  render_ok: "🟢 Rodando Liso"
+  timeout: "⚠️ Timeout (Demorou a responder)"
+  fora_alcance: "⚠️ Fora de alcance"
+  sem_monitores: "⚠️ Não encontrei nenhum monitor. Você monitora algo ou só vive no caos? 🙄"
+  http_error: "🔴 Erro HTTP"
+  uptime_online: "🟢 Online"
+  uptime_offline: "🔴 Offline/Pausado"
+
+errors:
+  not_owner: "I-I-Ih! O que você está pensando?! Isso é estritamente confidencial, você não é a liderança da SEO!! 💢😳"
