@@ -17,8 +17,6 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 logger = logging.getLogger('saka.core')
-
-# Força a saída do console para UTF-8
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 load_dotenv()
@@ -53,7 +51,6 @@ class SakaBot(commands.Bot):
                 await self.load_extension(cog_path)
                 logger.info(f"✅ Módulo carregado: {cog_path}")
             except Exception as e:
-                # exc_info=True mostra a linha exata do erro no Cog
                 logger.error(f"❌ Falha crítica ao carregar {cog_path}: {e}", exc_info=True)
 
     async def on_ready(self):

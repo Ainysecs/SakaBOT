@@ -16,7 +16,6 @@ class HelpDropdown(discord.ui.Select):
         for key, dados in self.categorias.items():
             nome_completo = dados.get("nome", key)
             
-            # Extrai o emoji com seguranç
             emoji = nome_completo.split()[0] if " " in nome_completo else None
             label = nome_completo.replace(emoji, "").strip() if emoji else nome_completo
             label = label[:100] 
@@ -80,7 +79,6 @@ class HelpView(discord.ui.View):
         if not interaction.response.is_done():
             await interaction.response.send_message("❌ Ocorreu um erro ao carregar esta categoria.", ephemeral=True)
 
-
 class HelpCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -141,7 +139,6 @@ class HelpCog(commands.Cog):
         config_help = self.bot.config.locales_pt_br_help
         msgs = config_help.get("messages", {})
 
-        # Fluxo 1: Usuário pediu uma categoria específica direto
         if categoria:
             categoria_key = categoria.lower()
             if categoria_key in config_help.get("categorias", {}):
@@ -159,7 +156,6 @@ class HelpCog(commands.Cog):
                 await ctx.send(erro_msg, ephemeral=True, delete_after=10)
                 return
 
-        # Fluxo 2: Menu interativo padrão
         embed_inicial = discord.Embed(
             title=msgs.get("main_title", "Central de Ajuda"),
             description=msgs.get("main_description", "Selecione uma categoria abaixo."),

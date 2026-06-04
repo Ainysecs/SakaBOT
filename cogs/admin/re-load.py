@@ -12,10 +12,6 @@ class Developer(commands.Cog):
         self.bot = bot
 
     async def _responder(self, ctx: commands.Context, mensagem: str):
-        """
-        Helper para responder ephemeral no slash e normal no prefixo.
-        inclui proteção contra internet oscilando (Erro 50035).
-        """
         if len(mensagem) > 2000:
             mensagem = mensagem[:1990] + "..."
 
@@ -34,7 +30,6 @@ class Developer(commands.Cog):
                     raise e
 
     def _formatar_traceback(self, erro: Exception) -> str:
-        """Extrai o traceback de forma segura e evita quebra de markdown."""
         tb = "".join(traceback.format_exception(type(erro), erro, erro.__traceback__))
         tb = tb.replace("```", "'''").replace("`", "'")
 
@@ -43,7 +38,7 @@ class Developer(commands.Cog):
         return tb
 
     # ==========================================
-    # COMANDO HÍBRIDO ÚNICO
+    # COMANDO HÍBRIDO
     # ==========================================
     @commands.hybrid_command(name="reload", hidden=True, description="[DEV] Recarrega os módulos da Saka.")
     @app_commands.describe(

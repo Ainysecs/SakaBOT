@@ -50,7 +50,7 @@ class ChatAI(commands.Cog):
             return "Você é uma assistente útil e amigável."
 
     # =================================================================
-    # MOTOR PRINCIPAL DA IA (Usado tanto pelo / quanto pelo !)
+    # MOTOR PRINCIPAL DA IA
     # =================================================================
     async def _gerar_resposta(self, user_id: int, channel_id: int, ask: str, img: discord.Attachment, enviar_mensagem_func):
         msgs = self.config_ai.get("messages", {})
@@ -77,7 +77,6 @@ class ChatAI(commands.Cog):
         try:
             conteudo_para_enviar = []
 
-            # Se tiver texto, adiciona. Se tiver SÓ imagem, adiciona um texto padrão.
             if ask:
                 conteudo_para_enviar.append(ask)
             elif img and not ask:
@@ -113,9 +112,8 @@ class ChatAI(commands.Cog):
             erro_msg = msgs.get("internal_error", "❌ Ocorreu um erro interno na IA. Tente novamente mais tarde.")
             await enviar_mensagem_func(erro_msg)
 
-
     # =================================================================
-    # 1. COMANDO DE PREFIXO (!ai ou !ia)
+    # 1. COMANDO DE PREFIXO
     # =================================================================
     @commands.command(name="ai", aliases=["ia"])
     @commands.cooldown(1, 30.0, commands.BucketType.user)
@@ -139,9 +137,8 @@ class ChatAI(commands.Cog):
         if isinstance(error, commands.CommandOnCooldown):
             await ctx.reply(f"⏳ Calma lá! Aguarde {error.retry_after:.1f} segundos para falar comigo de novo.")
 
-
     # =================================================================
-    # 2. SLASH COMMAND (/ai)
+    # 2. SLASH COMMAND
     # =================================================================
     @app_commands.command(name="ai", description="Converse com a Saka. Envie texto, imagem, ou os dois!")
     @app_commands.guild_only()

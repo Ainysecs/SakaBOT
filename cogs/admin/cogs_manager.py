@@ -8,10 +8,6 @@ from collections import defaultdict
 logger = logging.getLogger('saka.cogs.cogs_manager')
 
 class CogsManager(commands.Cog):
-    """
-    Módulo de gerenciamento e monitoramento das extensões (Cogs) do bot.
-    Lógica de apresentação totalmente integrada ao sistema dinâmico BotConfig.
-    """
 
     MAX_EMBED_FIELD_LENGTH = 1024
 
@@ -20,10 +16,6 @@ class CogsManager(commands.Cog):
         self.cogs_dir = Path("cogs")
 
     def _get_msg(self, path: str) -> str:
-        """
-        Navega de forma segura pelo dicionário gerado pelo BotConfig
-        com base no arquivo 'config/locales/pt_br/cogs_manager.yaml'.
-        """
         try:
             dados = self.bot.config.locales_pt_br_admin_cogs_manager
 

@@ -16,7 +16,6 @@ class Admin(commands.Cog):
         self.service_id = os.getenv('RENDER_SERVICE_ID')
 
     def _get_msg(self, path: str) -> str:
-        """Navega pelo dicionário de localização do System Status."""
         try:
             dados = self.bot.config.locales_pt_br_admin_system_status
             for chave in path.split('.'):
@@ -28,7 +27,6 @@ class Admin(commands.Cog):
 
     @property
     def versao(self) -> str:
-        """Puxa a versão dinamicamente do BotConfig."""
         try:
             return str(self.bot.config.version)
         except AttributeError:

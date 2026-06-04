@@ -17,7 +17,6 @@ except ImportError:
 logger = logging.getLogger('saka.config')
 
 class BotConfig:
-    """Carregador dinâmico, seguro e imutável de configurações (.txt, .json, .yaml, .toml)."""
 
     def __init__(self, config_path: str | Path | None = None) -> None:
         current_dir = Path(__file__).resolve().parent
@@ -36,29 +35,25 @@ class BotConfig:
         self._load_all_configs()
 
     def __getattr__(self, item: str) -> Any:
-        """Permite acessar as configs como atributos."""
         if item in self._data:
-            # Retorna uma cópia para evitar que a configuração global seja mutada acidentalmente
+            
             value = self._data[item]
             return copy.deepcopy(value) if isinstance(value, (dict, list, set)) else value
             
         raise AttributeError(f"Configuração '{item}' não existe ou falhou ao carregar.")
 
     def get(self, key: str, default: Any = None) -> Any:
-        """Acesso seguro com valor padrão, similar a dict.get()."""
         try:
             return getattr(self, key)
         except AttributeError:
             return default
 
     def reload(self) -> None:
-        """Limpa as configurações atuais e relê todos os arquivos do zero."""
         logger.info("🔄 Recarregando configurações do bot...")
         self._data.clear()
         self._load_all_configs()
 
     def _sanitize_name(self, name: str) -> str:
-        """Converte uma string para um formato Python seguro."""
         base_name = name.lower()
         base_name = re.sub(r'[\s\-]+', '_', base_name)
         base_name = re.sub(r'[^a-z0-9_]', '', base_name)
@@ -69,14 +64,12 @@ class BotConfig:
         return base_name
 
     def _generate_key(self, file_path: Path) -> str:
-        """Gera a chave do dicionário com base na estrutura de pastas."""
         rel_path = file_path.relative_to(self._config_dir)
         key_parts = [self._sanitize_name(part) for part in rel_path.parent.parts]
         key_parts.append(self._sanitize_name(file_path.stem))
         return "_".join(filter(None, key_parts))
 
     def _load_all_configs(self) -> None:
-        """Varre a pasta processando cada extensão com segurança."""
         supported_extensions = {'.txt', '.json', '.yaml', '.yml', '.toml'}
 
         for file_path in self._config_dir.rglob('*'):
@@ -101,7 +94,6 @@ class BotConfig:
             self._process_file(file_path, key)
 
     def _process_file(self, file_path: Path, key: str) -> None:
-        """Isola a lógica de leitura e parsing de cada arquivo individualmente."""
         try:
             raw_content = file_path.read_text(encoding="utf-8").strip()
             if not raw_content:
@@ -132,7 +124,6 @@ class BotConfig:
             logger.error(f"❌ Erro crítico ao ler {file_path}: {e.__class__.__name__}: {e}")
 
     def get_all(self) -> dict[str, Any]:
-        """Retorna uma cópia profunda (segura) de todas as configs carregadas."""
         return copy.deepcopy(self._data)
 
 bot_config = BotConfig()

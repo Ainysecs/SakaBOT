@@ -6,6 +6,7 @@ A **Saka** é um bot para Discord focado em automação, gestão de servidores e
 
 ## ⚙️ Status do Ambiente
 *   **Hospedagem:** Render
+*   **Ping:** UptimeRobot
 *   **Versão do Python:** 3.14.3
 *   **Status:** Online
 
@@ -18,41 +19,41 @@ A **Saka** é um bot para Discord focado em automação, gestão de servidores e
 
 | Comando | Descrição | Modo |
 | :---: | :--- | :---: |
-| `/sync` | Sincronização e limpeza do cache. | `⚡ Hybrid` |
-| `/reload` | Recarrega módulos (Cogs). | `⚡ Hybrid` |
-| `/cogs` | Monitoramento dos módulos. | `⚡ Hybrid` |
-| `/stats` | Performance e uptime. | `⚡ Hybrid` |
+| `/sync` | Sincronização e limpeza do cache. | `⚡ Híbrido` |
+| `/reload` | Recarrega módulos (Cogs). | `⚡ Híbrido` |
+| `/cogs` | Monitoramento dos módulos. | `⚡ Híbrido` |
+| `/stats` | Performance e uptime. | `⚡ Híbrido` |
 
 ### 🛡️ Moderação (Servidor)
 *Ferramentas essenciais para a staff manter a comunidade limpa, organizada e segura, agilizando as tarefas diárias de moderação.*
 
 | Comando | Descrição | Modo |
 | :---: | :--- | :---: |
-| `/clear` | Limpeza de histórico. | `Slash Only` |
-| `/member` | Gestão de membros (list, add, remove, edit). | `Slash Only` |
+| `/clear` | Limpeza de histórico. | `Apenas Slash` |
+| `/member` | Gestão de membros (list, add, remove, edit). | `Apenas Slash` |
 
 ### 🧩 Extras & Utilidades
 *Sistemas auxiliares, integrações de APIs externas e painéis interativos criados para facilitar o suporte e o dia a dia dos membros.*
 
 | Comando | Descrição | Modo |
 | :---: | :--- | :---: |
-| `/help` | Lista de comandos interativa. | `⚡ Hybrid` |
-| `/support` | Canal de atendimento (SAC). | `Slash Only` |
-| `/gcmd` | Comandos gerais/Painel fixo. | `Slash Only` |
-| `/rmural` | Remoção/gerenciamento de mural. | `Slash Only` |
+| `/help` | Lista de comandos interativa. | `⚡ Híbrido` |
+| `/support` | Canal de atendimento (SAC). | `Apenas Slash` |
+| `/gcmd` | Comandos gerais/Painel fixo. | `Apenas Slash` |
+| `/rmural` | Remoção/gerenciamento de mural. | `Apenas Slash` |
 
 ### 🌐 Área Pública (Comunitários)
 *Recursos interativos e de entretenimento focados no utilizador final.*
 
 | Comando | Descrição | Modo |
 | :---: | :--- | :---: |
-| `/ai` | Interação com IA (texto/imagem). | `⚡ Hybrid` |
+| `/ai` | Interação com IA (texto/imagem). | `⚡ Híbrido` |
 
 ---
 
 > ℹ️ **Nota de Compatibilidade:** 
-> - Comandos marcados com `⚡ Hybrid` aceitam prefixo `!` e `slash (/)`. 
-> - Comandos marcados como `Slash Only` funcionam **exclusivamente** através de `slash (/)`.
+> - Comandos marcados com `⚡ Híbrido` aceitam prefixo `!` e `slash (/)`. 
+> - Comandos marcados como `Apenas Slash` funcionam **exclusivamente** através de `slash (/)`.
 
 ---
 
@@ -86,13 +87,8 @@ python3 saka.py
 
 ---
 
-## ❓ Problemas ou Dúvidas?
+### ❓ Problemas ou Dúvidas?
    Se você tiver dificuldades com as credenciais do Google Sheets, variáveis no Render ou outras coisas, consulte o [Guia de Resolução de Problemas](TROUBLESHOOTING.md) para ver as instruções detalhadas.
-
----
-
-# 📖 Changelog (v2.0)
-  Aqui sempre estarão as changelogs mais recentes. [Dê uma olhada!](CHANGELOG.md)
 
 ---
 

@@ -9,9 +9,6 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 class EphemeralPaginator(discord.ui.View):
-    """
-    Paginador PRIVADO e temporário para leitura de comandos.
-    """
     def __init__(self, pages: list[dict], embed_base: dict):
         super().__init__(timeout=300.0) # Expira em 5 minutos
         self.pages = pages
@@ -24,7 +21,6 @@ class EphemeralPaginator(discord.ui.View):
         self._update_button_states()
 
     def _parse_color(self, color_str: str) -> int:
-        """Limpa a string de cor (remove '#') e converte para hexadecimal inteiro."""
         try:
             return int(str(color_str).replace("#", ""), 16)
         except (ValueError, TypeError):
@@ -77,11 +73,7 @@ class EphemeralPaginator(discord.ui.View):
         if not interaction.response.is_done():
             await interaction.response.send_message("❌ Ocorreu um erro ao trocar de página.", ephemeral=True)
 
-
 class PersistentMuralView(discord.ui.View):
-    """
-    Mural Fixo (Público). Sem timeout, sobrevive a reinicializações.
-    """
     def __init__(self, config: dict):
         super().__init__(timeout=None)
         self.config = config
@@ -116,7 +108,6 @@ class PersistentMuralView(discord.ui.View):
         logger.error(f"Erro no Mural Fixo: {error}\n{traceback.format_exc()}")
         if not interaction.response.is_done():
             await interaction.response.send_message("❌ Ocorreu um erro ao carregar esta seção.", ephemeral=True)
-
 
 class SystemCommands(commands.Cog):
     def __init__(self, bot: commands.Bot):
